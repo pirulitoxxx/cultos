@@ -1,0 +1,1010 @@
+/* ==========================================================================
+   ORDO VERITATIS // DOCUMENTO OFICIAL DE INTELIGÊNCIA
+   ESTILO: MONOCROMÁTICO / DOSSIÊ PROFISSIONAL (PRETO E BRANCO)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Alex+Brush&family=Cinzel:wght@500;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Paleta Rigorosamente Monocromática */
+  --bg-document: #0a0b0d;
+  --bg-page: #101216;
+  --bg-section: #14171d;
+  --bg-box: #0e1014;
+  --bg-highlight: #181b22;
+
+  /* Bordas e Divisores */
+  --border-subtle: #20242c;
+  --border-strong: #383e4a;
+  --border-divider: #4b5363;
+
+  /* Texto e Tipografia */
+  --text-main: #e2e5eb;
+  --text-bright: #ffffff;
+  --text-muted: #8b93a0;
+  --text-dim: #626977;
+
+  /* Tipografias */
+  --font-heading: 'Cinzel', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --doc-max-width: 920px;
+
+  /* Vermelho Perigo (Dossiês Restritos) */
+  --danger-red: #e63946;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background-color: var(--bg-document);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-document);
+  color: var(--text-main);
+  line-height: 1.7;
+  padding: 3rem 1.5rem 6rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Barra de rolagem discreta */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-document);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Container Central do Dossiê */
+.document-wrapper {
+  max-width: var(--doc-max-width);
+  margin: 0 auto;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  padding: 4rem 4.5rem;
+  position: relative;
+}
+
+/* ==========================================================================
+   CABEÇALHO DO DOCUMENTO DE INTELIGÊNCIA
+   ========================================================================== */
+.doc-header {
+  border-bottom: 2px solid var(--border-strong);
+  padding-bottom: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.doc-emblem-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.8rem;
+}
+
+.doc-emblem {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+  filter: contrast(1.1) brightness(1.05);
+}
+
+.doc-top-classification {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 0.4rem 0;
+  margin-bottom: 1.8rem;
+}
+
+.doc-title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-bright);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.doc-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+}
+
+.doc-metadata-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.doc-metadata-table td {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border-subtle);
+}
+
+.doc-metadata-table td strong {
+  color: var(--text-bright);
+}
+
+/* ==========================================================================
+   ÍNDICE GERAL DO DOCUMENTO (SUMÁRIO)
+   ========================================================================== */
+.doc-index {
+  background: var(--bg-section);
+  border: 1px solid var(--border-subtle);
+  padding: 1.8rem 2.2rem;
+  margin-bottom: 4rem;
+}
+
+.doc-index-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.doc-index-title::before {
+  content: "///";
+  color: var(--text-muted);
+}
+
+.doc-index-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2.5rem;
+}
+
+.index-group-title {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-bright);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.index-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.index-list a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.15s ease;
+}
+
+.index-list a:hover {
+  color: var(--text-bright);
+  text-decoration: underline;
+}
+
+.index-list a::before {
+  content: "—";
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   DIVISOR DE ELEMENTO (SEÇÃO)
+   ========================================================================== */
+.element-section-header {
+  border-top: 2px solid var(--border-divider);
+  border-bottom: 1px solid var(--border-divider);
+  padding: 1rem 0;
+  margin: 4.5rem 0 2.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.element-section-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+}
+
+.element-section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   ENTRADA DE CADA CULTO NO DOCUMENTO
+   ========================================================================== */
+.cult-entry {
+  padding: 1.5rem 0 3.5rem;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+.cult-entry:last-of-type {
+  border-bottom: none;
+}
+
+.cult-entry-header {
+  margin-bottom: 1.4rem;
+}
+
+.cult-entry-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.cult-entry-name {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.cult-overview-text {
+  font-size: 0.98rem;
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+  text-align: justify;
+}
+
+.cult-detail-block {
+  margin-bottom: 1.5rem;
+}
+
+.detail-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.detail-label::before {
+  content: "■ ";
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.detail-content {
+  font-size: 0.94rem;
+  color: var(--text-main);
+  line-height: 1.75;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-subtle);
+}
+
+/* Anexos Documentais / Fichas Confidenciais */
+.doc-attachment {
+  margin-top: 0.8rem;
+  max-width: 660px;
+}
+
+.doc-attachment-link {
+  display: block;
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+.doc-attachment-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border-strong);
+  background-color: #0b0d11;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Relatos e Testemunhos */
+.reports-block {
+  margin: 1.8rem 0;
+  background: var(--bg-box);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--text-muted);
+  padding: 1.2rem 1.6rem;
+}
+
+.reports-block-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.quote-line {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 0.6rem;
+}
+
+.quote-line:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   ASSINATURA DIGITAL // SR. VERÍSSIMO
+   ========================================================================== */
+.doc-signature-area {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.digital-signature {
+  font-family: 'Pinyon Script', 'Alex Brush', cursive;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #f5f7fa;
+  letter-spacing: 0.02em;
+  transform: rotate(-1.5deg);
+  display: inline-block;
+  user-select: none;
+  line-height: 1.1;
+  margin-bottom: 0.15rem;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.signature-line {
+  width: 220px;
+  height: 1px;
+  background-color: var(--border-divider);
+}
+
+/* ==========================================================================
+   RODAPÉ DO DOCUMENTO
+   ========================================================================== */
+.doc-footer {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-strong);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.doc-footer strong {
+  color: var(--text-bright);
+}
+
+.doc-footer-stamp {
+  display: inline-block;
+  margin-top: 1.8rem;
+  border: 1px solid var(--border-strong);
+  padding: 0.6rem 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-bright);
+  font-size: 0.72rem;
+}
+
+/* Botão Flutuante Discreto: Voltar ao Topo */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg-page);
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.back-to-top:hover {
+  background: var(--bg-highlight);
+  color: var(--text-bright);
+  border-color: var(--text-bright);
+}
+
+/* ==========================================================================
+   ESTILO PARA IMPRESSÃO / SALVAR COMO PDF
+   ========================================================================== */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    padding: 0 !important;
+  }
+
+  .document-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    background: transparent !important;
+  }
+
+  .doc-title, .cult-entry-name, .element-section-title, .detail-label, .index-group-title {
+    color: #000000 !important;
+  }
+
+  .cult-overview-text, .detail-content, .quote-line {
+    color: #222222 !important;
+  }
+
+  .doc-index, .reports-block {
+    background-color: #f7f7f7 !important;
+    border-color: #cccccc !important;
+  }
+
+  .detail-content {
+    border-left-color: #cccccc !important;
+  }
+
+  .back-to-top {
+    display: none !important;
+  }
+
+  .cult-entry {
+    page-break-inside: avoid;
+  }
+
+  .doc-attachment {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .doc-attachment-img {
+    box-shadow: none !important;
+    border-color: #333333 !important;
+  }
+
+  .digital-signature {
+    color: #000000 !important;
+  }
+
+  .signature-line {
+    background-color: #333333 !important;
+  }
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.5rem;
+  }
+  .document-wrapper {
+    padding: 2.5rem 1.5rem;
+  }
+  .doc-title {
+    font-size: 1.7rem;
+  }
+  .doc-index-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   DOSSIÊS INTERNOS // CATEGORIA EXCLUSIVA POR CULTO
+   ========================================================================== */
+
+/* Bloco externo dentro do cult-entry */
+.dossier-interno-block {
+  border-color: #e63946 !important;
+  margin-top: 1.5rem;
+}
+
+.dossier-interno-label {
+  color: #e63946 !important;
+  letter-spacing: 0.08em;
+}
+
+/* Card colapsável */
+.dossier-interno-card {
+  border: 1px solid #e63946;
+  border-radius: 3px;
+  background: #0a0c10;
+  overflow: hidden;
+}
+
+/* Header clicável */
+.dossier-interno-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  background: rgba(230, 57, 70, 0.06);
+  border-bottom: 1px solid rgba(230, 57, 70, 0.25);
+  user-select: none;
+  transition: background 0.2s;
+}
+.dossier-interno-header:hover {
+  background: rgba(230, 57, 70, 0.12);
+}
+
+.dossier-interno-filemeta {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.dossier-restrito-tag {
+  color: #e63946;
+  font-weight: 700;
+}
+
+.dossier-interno-titulo {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #e63946;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+
+.dossier-interno-subtitulo {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.dossier-toggle-icon {
+  font-size: 0.9rem;
+  color: #e63946;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* Corpo do dossiê */
+.dossier-interno-body {
+  padding: 1.25rem 1rem;
+}
+
+/* Grid de 2 colunas: info-geral + características */
+.dossier-interno-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  .dossier-interno-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Label de seção interna */
+.dossier-interno-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(230, 57, 70, 0.25);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Seção com separador */
+.dossier-interno-section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.06);
+}
+.dossier-interno-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Texto geral do dossiê */
+.dossier-interno-text {
+  font-size: 0.83rem;
+  color: var(--text-main);
+  line-height: 1.65;
+}
+
+/* Tabela de informações gerais */
+.dossier-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+}
+.dossier-info-table td {
+  padding: 0.28rem 0.45rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+.dossier-info-table td:first-child {
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  width: 42%;
+  background: rgba(255,255,255,0.02);
+}
+.dossier-info-table td:last-child {
+  color: var(--text-main);
+}
+.dossier-ameaca-cell {
+  color: #e63946 !important;
+  font-weight: 700;
+}
+
+/* Caixa de símbolo */
+.dossier-simbolo-box {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  border-radius: 2px;
+  background: rgba(230, 57, 70, 0.04);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Bloco do Evento Valthros */
+.dossier-evento-block {
+  background: rgba(230, 57, 70, 0.04);
+  border: 1px solid rgba(230, 57, 70, 0.18) !important;
+  border-radius: 2px;
+  padding: 0.85rem 0.9rem !important;
+}
+.dossier-evento-label {
+  color: #e63946 !important;
+  border-bottom-color: rgba(230, 57, 70, 0.35) !important;
+}
+
+/* Grid de agentes */
+.dossier-agentes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+.dossier-agente-tag {
+  display: flex;
+  flex-direction: column;
+  padding: 0.38rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 2px;
+  background: rgba(255,255,255,0.02);
+  min-width: 130px;
+}
+.dossier-agente-nome {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.02em;
+}
+.dossier-agente-papel {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+/* Bloco de conclusão */
+.dossier-conclusao-block {
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 2px;
+  padding: 0.85rem 0.9rem !important;
+}
+
+/* Rodapé do dossiê */
+.dossier-interno-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(230, 57, 70, 0.2);
+}
+.dossier-interno-org {
+  font-family: var(--font-mono);
+  font-size: 0.67rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+.dossier-interno-quote {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #e63946;
+  font-style: italic;
+  text-align: right;
+  flex: 1;
+}
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.internal-dossier-card {
+  border: 1px solid var(--danger-red, #e63946);
+  border-radius: 4px;
+  background: #0d0f13;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(230, 57, 70, 0.08);
+}
+
+.internal-dossier-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background: rgba(230, 57, 70, 0.06);
+  border-bottom: 1px solid rgba(230, 57, 70, 0.25);
+  user-select: none;
+  transition: background 0.2s;
+}
+.internal-dossier-header:hover {
+  background: rgba(230, 57, 70, 0.12);
+}
+
+.internal-dos-file {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.07em;
+}
+
+.internal-dos-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--danger-red, #e63946);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 0.15rem;
+}
+
+.internal-dos-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+
+.internal-dos-toggle-icon {
+  font-size: 0.9rem;
+  color: var(--danger-red, #e63946);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.internal-dossier-body {
+  display: none;
+  padding: 1.25rem 1.1rem;
+  border-top: 1px dashed rgba(230, 57, 70, 0.2);
+}
+
+.internal-dos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 680px) {
+  .internal-dos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.internal-dos-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(230, 57, 70, 0.3);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.internal-dos-section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.06);
+}
+.internal-dos-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.internal-dos-texto,
+.internal-dos-text {
+  font-size: 0.83rem;
+  color: var(--text-main);
+  line-height: 1.65;
+}
+
+.dos-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+}
+
+.dos-info-table td {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+
+.dos-info-table td:first-child {
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  width: 40%;
+  background: rgba(255,255,255,0.02);
+}
+
+.dos-info-table td:last-child {
+  color: var(--text-main);
+}
+
+.internal-dos-simbolo-box {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(230, 57, 70, 0.2);
+  border-radius: 3px;
+  background: rgba(230, 57, 70, 0.04);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.internal-dos-evento {
+  background: rgba(230, 57, 70, 0.04);
+  border: 1px solid rgba(230, 57, 70, 0.15);
+  border-radius: 3px;
+  padding: 0.85rem 1rem !important;
+}
+
+.dos-agents-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.dos-agent-tag {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 3px;
+  background: rgba(255,255,255,0.03);
+  min-width: 130px;
+}
+
+.dos-agent-name {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  letter-spacing: 0.03em;
+}
+
+.dos-agent-role {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+
+.internal-dos-conclusao {
+  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: 3px;
+  padding: 0.85rem 1rem !important;
+}
+
+.internal-dos-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+.internal-dos-org {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.internal-dos-quote {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--danger-red, #e63946);
+  font-style: italic;
+  text-align: right;
+  flex: 1;
+}
