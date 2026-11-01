@@ -38,7 +38,7 @@ const DEFAULT_CULTS = [
       "O sangue é herança. E a herança deve ser cultivada."
     ],
     knownMembers: [
-      { name: "Lucien Montclair ('Fléau')", role: "Membro de Linhagem / Transgressor", status: "Sob Investigação", attachment: "images/lucien-montclair.jpeg" },
+      { name: "Lucien Montclair ('Fléau')", role: "Membro de Linhagem / Transgressor", status: "Sob Investigação", attachment: "lucien-montclair.jpeg" },
       { name: "Patriarca sob vigilância", role: "Líder de Linhagem", status: "Desconhecido" },
       { name: "Registros de batismo corrompidos", role: "Herdeiros", status: "Não catalogado" }
     ],
@@ -71,7 +71,7 @@ const DEFAULT_CULTS = [
       "Canibalismo, tortura e até mutilação, tudo que envolva a dor e Sangue faz parte do dia a dia dentro do inferno dos Transtornados."
     ],
     knownMembers: [
-      { name: "O Açougueiro", role: "Líder Presumido / Transgressor de Sangue", status: "Ativo / Perigo Extremo", attachment: "images/o-acougueiro.jpeg" },
+      { name: "O Açougueiro", role: "Líder Presumido / Transgressor de Sangue", status: "Ativo / Perigo Extremo", attachment: "o-acougueiro.jpeg" },
       { name: "Sujeito 0-Alfa ('O Costurado')", role: "Vetor de Histeria", status: "Perambulação Ativa" }
     ],
     investigationNotes: "NUNCA tentar contenção individual. Os Transtornados ignoram dor incapacitante devido à saturação de Sangue. Priorizar neutralização à distância e contenção de arame farpado contaminado."
@@ -103,7 +103,7 @@ const DEFAULT_CULTS = [
       "Não servimos a uma bandeira. Nosso juramento foi feito em sangue, e somente o sangue poderá encerrá-lo."
     ],
     knownMembers: [
-      { name: "O Primeiro Vigia", role: "Comandante Operacional / Fundador", status: "Identidade Desconhecida", attachment: "images/primeiro-vigia.jpeg" }
+      { name: "O Primeiro Vigia", role: "Comandante Operacional / Fundador", status: "Identidade Desconhecida", attachment: "primeiro-vigia.jpeg" }
     ],
     investigationNotes: "Extrema cautela: agentes de campo altamente treinados com armamento tático e modificações paranormais de Sangue. Desconfiar de incidentes violentos atribuídos a eles, pois frequentemente agem para encobrir rituais dos Montclair."
   },
@@ -135,7 +135,7 @@ const DEFAULT_CULTS = [
       "Eles não falam. Não respiram pesado. Nem mesmo o som dos passos deles ecoa. Às vezes eu acho que o que vi não estava realmente ali."
     ],
     knownMembers: [
-      { name: "A Sombra Coletiva", role: "Consciência Não-Local", status: "Não Humano / Fluido", attachment: "images/dossie-circulo-das-sombras.jpeg" }
+      { name: "A Sombra Coletiva", role: "Consciência Não-Local", status: "Não Humano / Fluido", attachment: "dossie-circulo-das-sombras.jpeg" }
     ],
     investigationNotes: "Operações contra o Círculo exigem lanternas UV de alta potência e sinalizadores de magnésio. Microfones direcionais captam frequências infra-sônicas momentos antes da manifestação.",
     dossiers: [
@@ -203,7 +203,7 @@ const DEFAULT_CULTS = [
       "O osso é o que sobra. E o que sobra é eterno."
     ],
     knownMembers: [
-      { name: "O Ostearca", role: "Líder dos Ossários / Escultor-Mor", status: "Ativo / Perigo Extremo", attachment: "images/o-ostearca.jpeg" },
+      { name: "O Ostearca", role: "Líder dos Ossários / Escultor-Mor", status: "Ativo / Perigo Extremo", attachment: "o-ostearca.jpeg" },
       { name: "Dr. L. Vane (Desaparecido)", role: "Ex-Cirurgião Chefe / Escultor", status: "Foragido" },
       { name: "O Arquivista de Vértebras", role: "Catalogador de Relíquias", status: "Em Investigação" }
     ],
@@ -237,7 +237,7 @@ const DEFAULT_CULTS = [
       "Não existe conformidade quando se venera o Caos."
     ],
     knownMembers: [
-      { name: "O Diretor", role: "Diretor de Cena / Sr. Replay", status: "Ativo / Perigo Extremo", attachment: "images/o-diretor.jpeg" },
+      { name: "O Diretor", role: "Diretor de Cena / Sr. Replay", status: "Ativo / Perigo Extremo", attachment: "o-diretor.jpeg" },
       { name: "Equipe de Sombras & Cabos", role: "Cenógrafos Ocultistas", status: "Foragidos" }
     ],
     investigationNotes: "NÃO conectar dispositivos da Ordem a redes locais encontradas em bases da Produção. Todas as rotas possuem malware paranormal de sobrecarga eletromagnética."
@@ -270,7 +270,7 @@ const DEFAULT_CULTS = [
       "Toda luz é uma ferida. E nós somos os filhos do fogo que arde sem apagar."
     ],
     knownMembers: [
-      { name: "O Estopim", role: "Arauto do Fogo / Pai da Chama", status: "Ativo / Perigo Extremo", attachment: "images/o-estopim.jpeg" },
+      { name: "O Estopim", role: "Arauto do Fogo / Pai da Chama", status: "Ativo / Perigo Extremo", attachment: "o-estopim.jpeg" },
       { name: "Voz de Cinzas", role: "Profeta da Pira", status: "Avistado em Refinaria Desativada" }
     ],
     investigationNotes: "Equipes de contenção devem trajar macacões antichama de nível militar com suprimento autônomo de ar. Ambientes ocupados pelos Herdeiros costumam estar saturados de vapores voláteis de hidrocarbonetos."
@@ -302,7 +302,7 @@ const DEFAULT_CULTS = [
       "Nem todo portão deve ser aberto, mas toda chave existe por um motivo."
     ],
     knownMembers: [
-      { name: "O Arconte", role: "Líder dos Portadores da Chave / Custódio-Mor", status: "Ativo / Perigo Extremo", attachment: "images/o-arconte.jpeg" },
+      { name: "O Arconte", role: "Líder dos Portadores da Chave / Custódio-Mor", status: "Ativo / Perigo Extremo", attachment: "o-arconte.jpeg" },
       { name: "O Curador Silencioso", role: "Arquivista Chefe", status: "Não Identificado" },
       { name: "Dra. H. Vasconcelos", role: "Paleógrafa Infiltrada", status: "Sob Monitoramento da Ordem" }
     ],
@@ -335,7 +335,7 @@ const DEFAULT_CULTS = [
       "Todos parecem loucos, apenas repetindo que 'viram algo'."
     ],
     knownMembers: [
-      { name: "O Argos", role: "Líder do Códice Ocular / O Centésimo Olho", status: "Ativo / Perigo Extremo", attachment: "images/o-argos.jpeg" },
+      { name: "O Argos", role: "Líder do Códice Ocular / O Centésimo Olho", status: "Ativo / Perigo Extremo", attachment: "o-argos.jpeg" },
       { name: "Irmão da Pupila Aberta", role: "Vigília Perpétua", status: "Internado em Asilo Sob Custódia" },
       { name: "A Observadora do Espelho", role: "Guia dos Olhares", status: "Desconhecido" }
     ],

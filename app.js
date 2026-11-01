@@ -723,7 +723,7 @@ function openCultModal(cultId) {
     : `<p style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">Identidades físicas protegidas ou desconhecidas.</p>`;
 
   modalEl.innerHTML = `
-    <div class="modal-watermark" style="background-image: url('images/seal.jpeg');"></div>
+    <div class="modal-watermark" style="background-image: url('seal.jpeg');"></div>
 
     <div class="modal-top-tab">
       <div style="display: flex; align-items: center; gap: 0.6rem;">
